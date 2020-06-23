@@ -4,7 +4,7 @@ Matlab codes for TUFFC-IEEE paper "High-Resolution Ultrasound using Wave Interfe
 
 
 
-![Simulation results](/Fig 3.png)
+![Simulation results](/https://octodex.github.com/images/yaktocat.png)
 
  Table 1. MSE, PSNR, and SNR values of conventional and proposed image reconstruction methods
  
