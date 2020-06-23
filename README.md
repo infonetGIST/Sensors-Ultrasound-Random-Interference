@@ -22,7 +22,7 @@ Simulation Results
 
 
 
-- Simulation environment
+- Simulation dependencies
 
 1. Filed II ultrasound simulation software (https://field-ii.dk/)
 2. Yall 1 algorithm (http://yall1.blogs.rice.edu/)
