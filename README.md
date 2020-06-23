@@ -6,7 +6,7 @@ Traditionally, ultrasound interference was considered an undesired effect that d
 
 
 Simulation Results
-![Simulation results](/master/readme files/Fig_3.png)
+![Simulation results](/readme_files/Fig_3.png)
 
  Table 1. MSE, PSNR, and SNR values of conventional and proposed image reconstruction methods
  
