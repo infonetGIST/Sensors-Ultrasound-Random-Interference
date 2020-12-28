@@ -1,10 +1,10 @@
 % by NP 2019/12/13
 
-N = 50; % image size N by N
+N = 20; % image size N by N
 samples = N*N/2; % # of samples of the measurement signal
 
 f_image = phantom('Modified Shepp-Logan',N); % generate shep-logan phantom image
-f_image = (eye(N,N)*-1)+f_image; % multiple by random real numbers
+% f_image = (eye(N,N)*-1)+f_image; % multiple by random real numbers
 
 figure('Units', 'Pixels','Position', [100,100,1500, 500]);
 subplot(1,3,1) % show the phantom image
@@ -25,8 +25,8 @@ for i = 1:128 % number of iterations
     %%
     p_noise = awgn(p,10,0); % add noise
     
-%     G_tall = [G_tall; G];
-%     p_tall = [p_tall; p_noise];
+    G_tall = [G_tall; G];
+    p_tall = [p_tall; p_noise];
     
 %     f_hat = lsqnonneg(G,p_noise); % least-squares problems - nonnegative
     f_hat = lsqlin(G,p_noise); % reconstruct using least-squares problems
@@ -46,8 +46,8 @@ title('image f hat')
 
 %% tall
 
-% f_hat_tall = lsqnonneg(G_tall,p_tall); % least-squares problems - nonnegative
-suf_hat_tall = lsqlin(G_tall,p_tall); % reconstruct using least-squares problems
+f_hat_tall = lsqnonneg(G_tall,p_tall); % least-squares problems - nonnegative
+% suf_hat_tall = lsqlin(G_tall,p_tall); % reconstruct using least-squares problems
     
 f_image_hat_tall = reshape(f_hat_tall,N,N);
 
